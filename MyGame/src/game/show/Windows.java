@@ -6,6 +6,9 @@ import java.util.Hashtable;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import game.menu.Button;
+import game.menu.Menu;
+
 public class Windows extends JFrame{
 	private Hashtable<String, Button> buttons = new Hashtable<String, Button>();
 	private JPanel areaGame;

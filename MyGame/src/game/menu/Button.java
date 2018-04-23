@@ -1,4 +1,4 @@
-package game.show;
+package game.menu;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
