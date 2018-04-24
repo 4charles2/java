@@ -10,7 +10,7 @@ public class Windows extends JFrame{
 
 	public Windows(){ 
 		super("Walbreaker");
-//coucou
+
 		this.setLocationRelativeTo(null);
 		this.setAlwaysOnTop(true);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
