@@ -13,6 +13,7 @@ import javax.swing.JButton;
 
 public class Button extends JButton{
 	private String pictureFile;
+	private Image picture = null;
 	private int posX, posY;
 	public Button(String nameFile, Dimension sizeAreaGame) {		
 		this.setPosX(0);
@@ -23,7 +24,7 @@ public class Button extends JButton{
 	}
 	public void paintComponent(Graphics g) {
 		Graphics2D g2d = (Graphics2D)g;
-		Image picture = null;
+		
 		try {
 			picture = ImageIO.read(new File(this.getNameFile()));
 		} catch (IOException e) {
