@@ -5,39 +5,37 @@ import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
 import java.util.Hashtable;
-
 import javax.imageio.ImageIO;
+import javax.swing.JPanel;
 
-import game.show.AreaGame;
-
-public class Menu extends AreaGame{
+public class Menu<T extends JPanel> {
 	private Hashtable<String, Button> buttons = new Hashtable<String, Button>();
-	public Menu() {
-		this.setButtons("newPlayeur");
-		this.setButtons("continue");
-//		buttons.get("newPlayeur").addMouseListener(this);
-//		buttons.get("continue").addMouseListener(this);
-		//180 46 Taille originale de l'image sans la marge du JButton
-		buttons.get("newPlayeur").setBounds(100, 350, 180, 46);
-		buttons.get("continue").setBounds(842 - 100 - 180 , 350, 180, 46);
+	private T area;
+	public Menu(T pArea, Graphics g) {
+		this.area = pArea;
 		
-		this.add(buttons.get("newPlayeur"));
-		this.add(buttons.get("continue"));
-		
-	}
-	public void paintComponent(Graphics g) {
 		Image background = null;
 		try {
 			background = ImageIO.read(new File("image/1x/Menu.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		g.drawImage(background, 0, 0, this);
+		g.drawImage(background, 0, 0, this.area);
+		this.setButtons("newPlayeur");
+		this.setButtons("continue");
+		
+		buttons.get("newPlayeur").setBounds(100, 350, 180, 46);
+		buttons.get("continue").setBounds(842 - 100 - 180 , 350, 180, 46);
+		
+		this.area.add(buttons.get("newPlayeur"));
+		this.area.add(buttons.get("continue"));
+		
 	}
+
 	public Hashtable<String, Button> getButtons() {
 		return buttons;
 	}
 	public void setButtons(String name) {
-		this.buttons.put(name, new Button(name, this.sizeArea));
+		this.buttons.put(name, new Button(name, this.area.getSize()));
 	}
 }
