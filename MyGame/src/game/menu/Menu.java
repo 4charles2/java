@@ -9,7 +9,7 @@ import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 public class Menu<T extends JPanel> {
-	private Hashtable<String, Button> buttons = new Hashtable<String, Button>();
+	public Hashtable<String, Button> buttons = new Hashtable<String, Button>();
 	private String imgBackground = "image/menu/1x/Menu.png";
 	private T area;
 	private Graphics graphics;
@@ -23,11 +23,14 @@ public class Menu<T extends JPanel> {
 			e.printStackTrace();
 		}
 		g.drawImage(background, 0, 0, this.area);
+		
 		this.setButtons("newPlayeur");
 		this.setButtons("continue");
-		
+		//regle la position des buttons et leur taille
 		buttons.get("newPlayeur").setBounds(100, 350, 180, 46);
 		buttons.get("continue").setBounds(842 - 100 - 180 , 350, 180, 46);
+		
+		
 		
 		this.area.add(buttons.get("newPlayeur"));
 		this.area.add(buttons.get("continue"));
@@ -39,4 +42,5 @@ public class Menu<T extends JPanel> {
 	public void setButtons(String name) {
 		this.buttons.put(name, new Button(name, this.area.getSize()));
 	}
+	
 }

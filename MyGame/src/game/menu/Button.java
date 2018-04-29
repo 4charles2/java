@@ -18,6 +18,7 @@ public class Button extends JButton{
 	public Button(String nameFile, Dimension sizeAreaGame) {		
 		this.setPosX(0);
 		this.setPosY(0);
+		this.setName(nameFile);
 		this.setPreferredSize(new Dimension(210,150));
 		this.setNameFile(nameFile);
 		this.setContentAreaFilled(false);
@@ -50,7 +51,7 @@ public class Button extends JButton{
 		this.posY = posY;
 	}
 	private String getNameFile() {
-		return "image/menu/1x/"+this.pictureFile+".png";
+		return "image/buttons/1x/"+this.pictureFile+".png";
 	}
 	private void setNameFile(String nameFile) {
 		this.pictureFile = nameFile;

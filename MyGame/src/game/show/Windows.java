@@ -13,11 +13,10 @@ public class Windows extends JFrame{
 		this.setAlwaysOnTop(true);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setResizable(false);
-		areaGame.component = "menu";
 		this.setContentPane(areaGame);
 		this.setVisible(true);
 		pack();
 		
-		
 	}
+	
 }
