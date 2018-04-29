@@ -11,12 +11,13 @@ import javax.swing.JPanel;
 public class Menu<T extends JPanel> {
 	private Hashtable<String, Button> buttons = new Hashtable<String, Button>();
 	private T area;
+	private Graphics graphics;
 	public Menu(T pArea, Graphics g) {
 		this.area = pArea;
-		
+		this.graphics = g;
 		Image background = null;
 		try {
-			background = ImageIO.read(new File("image/1x/Menu.png"));
+			background = ImageIO.read(new File("image/menu/1x/Menu.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -31,7 +32,6 @@ public class Menu<T extends JPanel> {
 		this.area.add(buttons.get("continue"));
 		
 	}
-
 	public Hashtable<String, Button> getButtons() {
 		return buttons;
 	}

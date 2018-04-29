@@ -50,7 +50,7 @@ public class Button extends JButton{
 		this.posY = posY;
 	}
 	private String getNameFile() {
-		return "image/1x/"+this.pictureFile+".png";
+		return "image/menu/1x/"+this.pictureFile+".png";
 	}
 	private void setNameFile(String nameFile) {
 		this.pictureFile = nameFile;

@@ -3,9 +3,7 @@ package game.element;
 import java.awt.Graphics;
 import java.io.File;
 import java.io.IOException;
-
 import javax.imageio.ImageIO;
-
 import game.show.AreaGame;
 
 public class Ball {
