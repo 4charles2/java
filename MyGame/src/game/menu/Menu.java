@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 
 public class Menu<T extends JPanel> {
 	private Hashtable<String, Button> buttons = new Hashtable<String, Button>();
+	private String imgBackground = "image/menu/1x/Menu.png";
 	private T area;
 	private Graphics graphics;
 	public Menu(T pArea, Graphics g) {
@@ -17,7 +18,7 @@ public class Menu<T extends JPanel> {
 		this.graphics = g;
 		Image background = null;
 		try {
-			background = ImageIO.read(new File("image/menu/1x/Menu.png"));
+			background = ImageIO.read(new File(this.imgBackground));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
