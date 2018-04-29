@@ -19,7 +19,7 @@ public class Button extends JButton{
 		this.setPosX(0);
 		this.setPosY(0);
 		this.setName(nameFile);
-		this.setPreferredSize(new Dimension(210,150));
+		this.setPreferredSize(new Dimension(180,46));
 		this.setNameFile(nameFile);
 		this.setContentAreaFilled(false);
 	}

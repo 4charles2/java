@@ -9,13 +9,13 @@ public class Windows extends JFrame{
 	public Windows(){ 
 		super("Walbreaker");
 
-		this.setLocationRelativeTo(null);
 		this.setAlwaysOnTop(true);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.setContentPane(areaGame);
 		this.setVisible(true);
 		pack();
+		this.setLocationRelativeTo(null);
 		
 	}
 	
